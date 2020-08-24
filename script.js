@@ -116,3 +116,28 @@ function firstCardGetsLast(x) {
 navCardButton2.addEventListener("click", firstCardGetsLast); 
 
 // Fonctionnalité 9 : //
+
+logoNav.onkeypress = function(){
+
+};
+
+logoNav.addEventListener("keypress", myScript);
+
+
+
+logoNav.addEventListener('click', function() {
+  document.addEventListener('click', function (e){
+    if(e.key === 'a') {
+      document.body.className = '';
+      document.body.classList.add('col-4');
+    } else if (e.key ==='y') {
+      document.body.className = '';
+      document.body.classList.add('offset-md-4', 'col-4');
+    } else if (e.key ==='p') {
+      document.body.className = '';
+      document.body.classList.add('offset-md-8', 'col-4');
+    } else if (e.key ==='b') {
+      document.body.className = '';
+    }
+  });
+})
