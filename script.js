@@ -96,3 +96,23 @@ for (let count = 0; count < 6; count++) {
     }
     cardButtonView.addEventListener("mouseover", miniCard);
 }
+
+// Fonctionnalité 7 : //
+
+let navCardButton1 = document.getElementsByClassName("my-2")[1];
+let cardsPosition = document.getElementsByClassName("row")[1];
+function lastCardGetsFirst() {
+    cardsPosition.insertBefore(cardsPosition.children[5], cardsPosition.children[0]);
+}
+navCardButton1.addEventListener("click", lastCardGetsFirst);
+
+// Fonctionnalité 8 : //
+
+let navCardButton2 = document.getElementsByClassName("my-2")[0];
+function firstCardGetsLast(x) {
+    x.preventDefault();
+    cardsPosition.insertBefore(cardsPosition.children[0], cardsPosition.children[5].nextSibling);
+}
+navCardButton2.addEventListener("click", firstCardGetsLast); 
+
+// Fonctionnalité 9 : //
